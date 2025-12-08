@@ -1,0 +1,29 @@
+{
+  "folders": [
+	{
+		"path": "../../../project/my-app"
+	},
+	{
+		"path": "../../../project/my-app-client"
+	},
+	{
+		"path": "../../muhammadjon"
+	},
+	{
+		"path": "../../blog-platform"
+	},
+	{
+		"path": "../../expense-tracker-app"
+	},
+	{
+		"path": "../../expense-tracker-root"
+	},
+	{
+		"path": ".."
+	}
+],
+  "settings": {
+    "nxConsole.generateAiAgentRules": true,
+    "postman.settings.dotenv-detection-notification-visibility": false
+  }
+}

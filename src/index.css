@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+.input-container {
+  position: relative;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.input-container input {
+  padding: 10px 20px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: calc(infinity * 1px);
+}
+.input-container input:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+.input-container label {
+  position: absolute;
+  background-color: #fff;
+  padding: 0 2px;
+  top: 10px;
+  left: 20px;
+  color: #999;
+  pointer-events: none; /* Allows clicks to pass through to the input */
+  transition: all 0.3s ease-in-out; /* Transition for all changes */
+}
+
+input:focus ~ label,
+input:not(:focus):valid ~ label {
+  top: -10px; /* Move label up */
+  left: 20px;
+  font-size: 0.8em;
+  /* color: #333; Change label color */
+  @apply text-blue-500;
+}
+.tooltip-container {
+  position: relative;
+  display: block;
+}
+
+.tooltip-content {
+  position: absolute;
+  background-color: #fff;
+  color: #f00;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: opacity 0.3s;
+  z-index: 1;
+  top: 0;
+  left: 20px;
+}
+
+.hanburger-menu {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  display: flex; /* Hidden by default, shown on smaller screens */
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  justify-content: space-between;
+}
+.close {
+  display: none;
+}
+.hanburger-menu span {
+  @apply bg-gray-500;
+  height: 4px;
+  border-radius: 2px;
+}
+.hanburger-menu:hover span {
+  background: #007bff;
+  transition: width 0.5s ease-in-out;
+}
+.hanburger-menu:hover span:nth-child(2) {
+  width: 80%;
+  align-self: flex-end;
+}
+.hanburger-menu:hover span:nth-child(3) {
+  width: 60%;
+  align-self: flex-start;
+}
