@@ -9,6 +9,14 @@ function ProtectedRoute({ children }) {
   useEffect(() => {
     const check = async () => {
       try {
+
+         const token = localStorage.getItem("exp_token");
+
+        if (!token) {
+          setIsAuth(false);
+          return;
+        }
+
         const valid = await validateToken(); // tokenni tekshiryapti
         localStorage.setItem('customer', JSON.stringify(valid.customer))
         
