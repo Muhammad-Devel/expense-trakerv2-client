@@ -1,7 +1,7 @@
 import axios from "axios";
 import { authConfig } from "./authConfig";
 
-export const BASE_URL = "/api";
+export const BASE_URL = "https://expense-trakerv2-server.onrender.com/api";
 
 export const api = axios.create({
   baseURL: BASE_URL,
